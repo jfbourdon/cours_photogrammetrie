@@ -1,0 +1,10 @@
+% Équipe G03
+% ---------------
+% Coordonnées des points de vérification après la transformation
+% 
+% x (cm) | y (cm)
+  29.52	   22.24
+  32.51	   23.24
+  33.89	   23.04
+  37.25	   21.82
+  38.42	   20.21
