@@ -46,15 +46,15 @@ arr_xy1_points = load_xy(os.path.join(wdir, file_xy1_points), header_length)
 arr_xy2_points = load_xy(os.path.join(wdir, file_xy2_points), header_length)
 
 # Construction de la matrice A
-nb_coord = arr_xy2_points.shape[0]
+nb_coord = arr_xy1_points.shape[0]
 arr_A = np.zeros((nb_coord*2,6), dtype=np.float32)
 ii = 0
 for line in range(0, nb_coord*2, 2):
-    arr_A[line,0] = arr_xy2_points[ii,0]
-    arr_A[line,1] = arr_xy2_points[ii,1]
+    arr_A[line,0] = arr_xy1_points[ii,0]
+    arr_A[line,1] = arr_xy1_points[ii,1]
     arr_A[line,2] = 1
-    arr_A[line+1,3] = arr_xy2_points[ii,0]
-    arr_A[line+1,4] = arr_xy2_points[ii,1]
+    arr_A[line+1,3] = arr_xy1_points[ii,0]
+    arr_A[line+1,4] = arr_xy1_points[ii,1]
     arr_A[line+1,5] = 1
     ii += 1
 
